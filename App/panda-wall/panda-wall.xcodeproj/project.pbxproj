@@ -13,16 +13,20 @@
 		23E1461719366A3A007F0F6C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23E1461519366A3A007F0F6C /* InfoPlist.strings */; };
 		23E1461919366A3A007F0F6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1461819366A3A007F0F6C /* main.m */; };
 		23E1461D19366A3A007F0F6C /* RKPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1461C19366A3A007F0F6C /* RKPAppDelegate.m */; };
-		23E1462019366A3A007F0F6C /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E1461E19366A3A007F0F6C /* Main_iPhone.storyboard */; };
-		23E1462319366A3A007F0F6C /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E1462119366A3A007F0F6C /* Main_iPad.storyboard */; };
-		23E1462619366A3A007F0F6C /* RKPMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1462519366A3A007F0F6C /* RKPMasterViewController.m */; };
-		23E1462919366A3A007F0F6C /* RKPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1462819366A3A007F0F6C /* RKPDetailViewController.m */; };
-		23E1462B19366A3A007F0F6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E1462A19366A3A007F0F6C /* Images.xcassets */; };
 		23E1463219366A3B007F0F6C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1463119366A3B007F0F6C /* XCTest.framework */; };
 		23E1463319366A3B007F0F6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1460C19366A3A007F0F6C /* Foundation.framework */; };
 		23E1463419366A3B007F0F6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1461019366A3A007F0F6C /* UIKit.framework */; };
 		23E1463C19366A3B007F0F6C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23E1463A19366A3B007F0F6C /* InfoPlist.strings */; };
 		23E1463E19366A3B007F0F6C /* panda_wallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1463D19366A3B007F0F6C /* panda_wallTests.m */; };
+		23E14693193675A5007F0F6C /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E14686193675A5007F0F6C /* Main_iPad.storyboard */; };
+		23E14694193675A5007F0F6C /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E14688193675A5007F0F6C /* Main_iPhone.storyboard */; };
+		23E14695193675A5007F0F6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E1468A193675A5007F0F6C /* Images.xcassets */; };
+		23E14696193675A5007F0F6C /* RKPThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1468D193675A5007F0F6C /* RKPThumbnailCell.m */; };
+		23E14697193675A5007F0F6C /* RKPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E14690193675A5007F0F6C /* RKPDetailViewController.m */; };
+		23E14698193675A5007F0F6C /* RKPMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E14692193675A5007F0F6C /* RKPMasterViewController.m */; };
+		23E1469D19367852007F0F6C /* vcard.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E1469B19367852007F0F6C /* vcard.png */; };
+		23E1469E19367852007F0F6C /* vcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E1469C19367852007F0F6C /* vcard@2x.png */; };
+		23E146A019368ADD007F0F6C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1469F19368ADD007F0F6C /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,19 +64,24 @@
 		23E1461A19366A3A007F0F6C /* panda-wall-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "panda-wall-Prefix.pch"; sourceTree = "<group>"; };
 		23E1461B19366A3A007F0F6C /* RKPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKPAppDelegate.h; sourceTree = "<group>"; };
 		23E1461C19366A3A007F0F6C /* RKPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RKPAppDelegate.m; sourceTree = "<group>"; };
-		23E1461F19366A3A007F0F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		23E1462219366A3A007F0F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		23E1462419366A3A007F0F6C /* RKPMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKPMasterViewController.h; sourceTree = "<group>"; };
-		23E1462519366A3A007F0F6C /* RKPMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RKPMasterViewController.m; sourceTree = "<group>"; };
-		23E1462719366A3A007F0F6C /* RKPDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKPDetailViewController.h; sourceTree = "<group>"; };
-		23E1462819366A3A007F0F6C /* RKPDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RKPDetailViewController.m; sourceTree = "<group>"; };
-		23E1462A19366A3A007F0F6C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		23E1463019366A3B007F0F6C /* panda-wallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "panda-wallTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E1463119366A3B007F0F6C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		23E1463919366A3B007F0F6C /* panda-wallTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "panda-wallTests-Info.plist"; sourceTree = "<group>"; };
 		23E1463B19366A3B007F0F6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		23E1463D19366A3B007F0F6C /* panda_wallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = panda_wallTests.m; sourceTree = "<group>"; };
 		23E1467919366B3C007F0F6C /* MediaManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MediaManager.xcodeproj; path = MediaManager/MediaManager.xcodeproj; sourceTree = "<group>"; };
+		23E14687193675A5007F0F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		23E14689193675A5007F0F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		23E1468A193675A5007F0F6C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		23E1468C193675A5007F0F6C /* RKPThumbnailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKPThumbnailCell.h; sourceTree = "<group>"; };
+		23E1468D193675A5007F0F6C /* RKPThumbnailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKPThumbnailCell.m; sourceTree = "<group>"; };
+		23E1468F193675A5007F0F6C /* RKPDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKPDetailViewController.h; sourceTree = "<group>"; };
+		23E14690193675A5007F0F6C /* RKPDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKPDetailViewController.m; sourceTree = "<group>"; };
+		23E14691193675A5007F0F6C /* RKPMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKPMasterViewController.h; sourceTree = "<group>"; };
+		23E14692193675A5007F0F6C /* RKPMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKPMasterViewController.m; sourceTree = "<group>"; };
+		23E1469B19367852007F0F6C /* vcard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vcard.png; sourceTree = "<group>"; };
+		23E1469C19367852007F0F6C /* vcard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vcard@2x.png"; sourceTree = "<group>"; };
+		23E1469F19368ADD007F0F6C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E146A019368ADD007F0F6C /* ImageIO.framework in Frameworks */,
 				23E1460F19366A3A007F0F6C /* CoreGraphics.framework in Frameworks */,
 				23E1461119366A3A007F0F6C /* UIKit.framework in Frameworks */,
 				23E1460D19366A3A007F0F6C /* Foundation.framework in Frameworks */,
@@ -121,6 +131,7 @@
 		23E1460B19366A3A007F0F6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23E1469F19368ADD007F0F6C /* ImageIO.framework */,
 				23E1467919366B3C007F0F6C /* MediaManager.xcodeproj */,
 				23E1460C19366A3A007F0F6C /* Foundation.framework */,
 				23E1460E19366A3A007F0F6C /* CoreGraphics.framework */,
@@ -133,15 +144,11 @@
 		23E1461219366A3A007F0F6C /* panda-wall */ = {
 			isa = PBXGroup;
 			children = (
+				23E14685193675A5007F0F6C /* Resources */,
+				23E1468B193675A5007F0F6C /* Views */,
+				23E1468E193675A5007F0F6C /* ViewControllers */,
 				23E1461B19366A3A007F0F6C /* RKPAppDelegate.h */,
 				23E1461C19366A3A007F0F6C /* RKPAppDelegate.m */,
-				23E1461E19366A3A007F0F6C /* Main_iPhone.storyboard */,
-				23E1462119366A3A007F0F6C /* Main_iPad.storyboard */,
-				23E1462419366A3A007F0F6C /* RKPMasterViewController.h */,
-				23E1462519366A3A007F0F6C /* RKPMasterViewController.m */,
-				23E1462719366A3A007F0F6C /* RKPDetailViewController.h */,
-				23E1462819366A3A007F0F6C /* RKPDetailViewController.m */,
-				23E1462A19366A3A007F0F6C /* Images.xcassets */,
 				23E1461319366A3A007F0F6C /* Supporting Files */,
 			);
 			path = "panda-wall";
@@ -183,6 +190,54 @@
 				23E1468119366B3D007F0F6C /* MediaManagerTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		23E14685193675A5007F0F6C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23E1469919367852007F0F6C /* Images */,
+				23E14686193675A5007F0F6C /* Main_iPad.storyboard */,
+				23E14688193675A5007F0F6C /* Main_iPhone.storyboard */,
+				23E1468A193675A5007F0F6C /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		23E1468B193675A5007F0F6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				23E1468C193675A5007F0F6C /* RKPThumbnailCell.h */,
+				23E1468D193675A5007F0F6C /* RKPThumbnailCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		23E1468E193675A5007F0F6C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				23E1468F193675A5007F0F6C /* RKPDetailViewController.h */,
+				23E14690193675A5007F0F6C /* RKPDetailViewController.m */,
+				23E14691193675A5007F0F6C /* RKPMasterViewController.h */,
+				23E14692193675A5007F0F6C /* RKPMasterViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		23E1469919367852007F0F6C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				23E1469A19367852007F0F6C /* SampleImage */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		23E1469A19367852007F0F6C /* SampleImage */ = {
+			isa = PBXGroup;
+			children = (
+				23E1469B19367852007F0F6C /* vcard.png */,
+				23E1469C19367852007F0F6C /* vcard@2x.png */,
+			);
+			path = SampleImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,10 +340,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23E1462319366A3A007F0F6C /* Main_iPad.storyboard in Resources */,
-				23E1462B19366A3A007F0F6C /* Images.xcassets in Resources */,
-				23E1462019366A3A007F0F6C /* Main_iPhone.storyboard in Resources */,
+				23E1469D19367852007F0F6C /* vcard.png in Resources */,
+				23E1469E19367852007F0F6C /* vcard@2x.png in Resources */,
 				23E1461719366A3A007F0F6C /* InfoPlist.strings in Resources */,
+				23E14695193675A5007F0F6C /* Images.xcassets in Resources */,
+				23E14693193675A5007F0F6C /* Main_iPad.storyboard in Resources */,
+				23E14694193675A5007F0F6C /* Main_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,10 +364,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23E1462619366A3A007F0F6C /* RKPMasterViewController.m in Sources */,
 				23E1461D19366A3A007F0F6C /* RKPAppDelegate.m in Sources */,
+				23E14696193675A5007F0F6C /* RKPThumbnailCell.m in Sources */,
 				23E1461919366A3A007F0F6C /* main.m in Sources */,
-				23E1462919366A3A007F0F6C /* RKPDetailViewController.m in Sources */,
+				23E14698193675A5007F0F6C /* RKPMasterViewController.m in Sources */,
+				23E14697193675A5007F0F6C /* RKPDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,28 +399,28 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		23E1461E19366A3A007F0F6C /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				23E1461F19366A3A007F0F6C /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		23E1462119366A3A007F0F6C /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				23E1462219366A3A007F0F6C /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		23E1463A19366A3B007F0F6C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				23E1463B19366A3B007F0F6C /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		23E14686193675A5007F0F6C /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23E14687193675A5007F0F6C /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		23E14688193675A5007F0F6C /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23E14689193675A5007F0F6C /* Base */,
+			);
+			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -445,6 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "panda-wall/panda-wall-Prefix.pch";
 				INFOPLIST_FILE = "panda-wall/panda-wall-Info.plist";
@@ -458,6 +517,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "panda-wall/panda-wall-Prefix.pch";
 				INFOPLIST_FILE = "panda-wall/panda-wall-Info.plist";
@@ -470,6 +530,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/panda-wall.app/panda-wall";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -492,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/panda-wall.app/panda-wall";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RKPThumbnailCell.h"
 
 @class RKPDetailViewController;
 
-@interface RKPMasterViewController : UITableViewController
+@interface RKPMasterViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (strong, nonatomic) RKPDetailViewController *detailViewController;
 

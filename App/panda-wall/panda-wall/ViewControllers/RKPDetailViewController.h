@@ -10,7 +10,9 @@
 
 @interface RKPDetailViewController : UIViewController <UISplitViewControllerDelegate>
 
-@property (strong, nonatomic) id detailItem;
+@property (nonatomic, strong) UIImage *passonImage;
+@property (nonatomic, strong) IBOutlet UIImageView *fullSizeImage;
+@property (nonatomic, strong) IBOutlet UILabel *imageTimeStamp;
+@property (nonatomic, strong) IBOutlet UILabel *imageGeoTag;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end

@@ -7,44 +7,25 @@
 //
 
 #import "RKPDetailViewController.h"
+#import <ImageIO/ImageIO.h>
 
 @interface RKPDetailViewController ()
+
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
-- (void)configureView;
 @end
 
 @implementation RKPDetailViewController
 
-#pragma mark - Managing the detail item
-
-- (void)setDetailItem:(id)newDetailItem
-{
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
-    }
-
-    if (self.masterPopoverController != nil) {
-        [self.masterPopoverController dismissPopoverAnimated:YES];
-    }        
-}
-
-- (void)configureView
-{
-    // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
-    }
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
+    [_fullSizeImage setImage:_passonImage];
+    
+    NSDictionary *metaData = [self extractImageMetaData:_passonImage];
+    
+    NSLog(@"Metadata %@",metaData);
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,5 +49,29 @@
     [self.navigationItem setLeftBarButtonItem:nil animated:YES];
     self.masterPopoverController = nil;
 }
+
+- (NSDictionary*) extractImageMetaData:(UIImage*)image
+{
+    NSData *jpeg = [NSData dataWithData:UIImagePNGRepresentation(image)];
+    CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)jpeg, NULL);
+    CFDictionaryRef imageMetaData = CGImageSourceCopyPropertiesAtIndex(source,0,NULL);
+    NSLog (@"imageMetaData %@",imageMetaData);
+    return (__bridge NSDictionary *)(imageMetaData);
+}
+
+- (void) logMetaDataFromAssetLibrary:(NSDictionary*)info
+{
+    
+    NSURL *assetURL = [info objectForKey:UIImagePickerControllerReferenceURL];
+    
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    [library assetForURL:assetURL
+             resultBlock:^(ALAsset *asset)  {
+                 NSDictionary *imageMetaData = asset.defaultRepresentation.metadata;
+                 NSLog (@"imageMetaData %@",imageMetadata);
+             }
+            failureBlock:nil];
+}
+
 
 @end

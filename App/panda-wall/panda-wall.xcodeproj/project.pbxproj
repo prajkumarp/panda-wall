@@ -33,6 +33,20 @@
 			remoteGlobalIDString = 23E1460819366A3A007F0F6C;
 			remoteInfo = "panda-wall";
 		};
+		23E1467E19366B3D007F0F6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23E1467919366B3C007F0F6C /* MediaManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 23E1465019366B3C007F0F6C;
+			remoteInfo = MediaManager;
+		};
+		23E1468019366B3D007F0F6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23E1467919366B3C007F0F6C /* MediaManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 23E1466019366B3C007F0F6C;
+			remoteInfo = MediaManagerTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +72,7 @@
 		23E1463919366A3B007F0F6C /* panda-wallTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "panda-wallTests-Info.plist"; sourceTree = "<group>"; };
 		23E1463B19366A3B007F0F6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		23E1463D19366A3B007F0F6C /* panda_wallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = panda_wallTests.m; sourceTree = "<group>"; };
+		23E1467919366B3C007F0F6C /* MediaManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MediaManager.xcodeproj; path = MediaManager/MediaManager.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +121,7 @@
 		23E1460B19366A3A007F0F6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23E1467919366B3C007F0F6C /* MediaManager.xcodeproj */,
 				23E1460C19366A3A007F0F6C /* Foundation.framework */,
 				23E1460E19366A3A007F0F6C /* CoreGraphics.framework */,
 				23E1461019366A3A007F0F6C /* UIKit.framework */,
@@ -158,6 +174,15 @@
 				23E1463A19366A3B007F0F6C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		23E1467A19366B3C007F0F6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23E1467F19366B3D007F0F6C /* libMediaManager.a */,
+				23E1468119366B3D007F0F6C /* MediaManagerTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +249,12 @@
 			mainGroup = 23E1460019366A3A007F0F6C;
 			productRefGroup = 23E1460A19366A3A007F0F6C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 23E1467A19366B3C007F0F6C /* Products */;
+					ProjectRef = 23E1467919366B3C007F0F6C /* MediaManager.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				23E1460819366A3A007F0F6C /* panda-wall */,
@@ -231,6 +262,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		23E1467F19366B3D007F0F6C /* libMediaManager.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMediaManager.a;
+			remoteRef = 23E1467E19366B3D007F0F6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		23E1468119366B3D007F0F6C /* MediaManagerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MediaManagerTests.xctest;
+			remoteRef = 23E1468019366B3D007F0F6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		23E1460719366A3A007F0F6C /* Resources */ = {

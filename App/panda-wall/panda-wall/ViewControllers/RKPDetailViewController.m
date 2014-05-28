@@ -59,19 +59,6 @@
     return (__bridge NSDictionary *)(imageMetaData);
 }
 
-- (void) logMetaDataFromAssetLibrary:(NSDictionary*)info
-{
-    
-    NSURL *assetURL = [info objectForKey:UIImagePickerControllerReferenceURL];
-    
-    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-    [library assetForURL:assetURL
-             resultBlock:^(ALAsset *asset)  {
-                 NSDictionary *imageMetaData = asset.defaultRepresentation.metadata;
-                 NSLog (@"imageMetaData %@",imageMetadata);
-             }
-            failureBlock:nil];
-}
 
 
 @end

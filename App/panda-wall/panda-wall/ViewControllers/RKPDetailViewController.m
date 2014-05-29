@@ -8,6 +8,7 @@
 
 #import "RKPDetailViewController.h"
 #import <ImageIO/ImageIO.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface RKPDetailViewController ()
 
@@ -21,9 +22,38 @@
 {
     
     [super viewDidLoad];
-    [_fullSizeImage setImage:[[_passonImageDetails thumbnailImage] image]];
+    
     [_imageTimeStamp setText:[[_passonImageDetails imageDetails] getDateandTime]];
     [self updateImageLocation:[[_passonImageDetails imageDetails] geoTag]];
+    
+    ALAssetsLibrary *assetLib = [[ALAssetsLibrary alloc] init];
+    
+    ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
+    {
+        // get the image
+    ALAssetRepresentation *rep = [myasset defaultRepresentation];
+    CGImageRef imageref = [rep fullResolutionImage];
+    if (imageref) {
+        [[self fullSizeImage] setImage:[UIImage imageWithCGImage:imageref]];
+    }
+    
+    };
+    
+    
+    ALAssetsLibraryAccessFailureBlock failureblock  = ^(NSError *myerror)
+    {
+    
+    };
+    
+    
+    
+    [assetLib assetForURL:[[_passonImageDetails imageDetails] assetURL]
+        resultBlock:resultblock
+       failureBlock:failureblock];
+    
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,6 +96,9 @@
          }
      }];
 }
+
+
+
 
 
 @end

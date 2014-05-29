@@ -19,6 +19,8 @@
 		23E147261936EDAC007F0F6C /* ImageInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E147251936EDAC007F0F6C /* ImageInformation.m */; };
 		23E147281936F049007F0F6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E147271936F049007F0F6C /* CoreLocation.framework */; };
 		23E1472B1936F0CA007F0F6C /* ImageInformation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23E147241936EDAC007F0F6C /* ImageInformation.h */; };
+		23E1472D193776BA007F0F6C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1472C193776BA007F0F6C /* AssetsLibrary.framework */; };
+		23E1473419377701007F0F6C /* ImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1473319377701007F0F6C /* ImageHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,9 @@
 		23E147241936EDAC007F0F6C /* ImageInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageInformation.h; sourceTree = "<group>"; };
 		23E147251936EDAC007F0F6C /* ImageInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageInformation.m; sourceTree = "<group>"; };
 		23E147271936F049007F0F6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		23E1472C193776BA007F0F6C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		23E1473219377701007F0F6C /* ImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHelper.h; sourceTree = "<group>"; };
+		23E1473319377701007F0F6C /* ImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E1472D193776BA007F0F6C /* AssetsLibrary.framework in Frameworks */,
 				23E147281936F049007F0F6C /* CoreLocation.framework in Frameworks */,
 				23E146F11936E631007F0F6C /* Foundation.framework in Frameworks */,
 			);
@@ -108,6 +114,7 @@
 		23E146EF1936E631007F0F6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23E1472C193776BA007F0F6C /* AssetsLibrary.framework */,
 				23E147271936F049007F0F6C /* CoreLocation.framework */,
 				23E146F01936E631007F0F6C /* Foundation.framework */,
 				23E146FE1936E631007F0F6C /* XCTest.framework */,
@@ -119,6 +126,7 @@
 		23E146F21936E631007F0F6C /* MediaManager */ = {
 			isa = PBXGroup;
 			children = (
+				23E1473119377701007F0F6C /* Utility */,
 				23E147231936EDAC007F0F6C /* model */,
 				23E146F51936E631007F0F6C /* MediaManager.h */,
 				23E146F71936E631007F0F6C /* MediaManager.m */,
@@ -160,6 +168,15 @@
 				23E147251936EDAC007F0F6C /* ImageInformation.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		23E1473119377701007F0F6C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				23E1473219377701007F0F6C /* ImageHelper.h */,
+				23E1473319377701007F0F6C /* ImageHelper.m */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E1473419377701007F0F6C /* ImageHelper.m in Sources */,
 				23E147261936EDAC007F0F6C /* ImageInformation.m in Sources */,
 				23E146F81936E631007F0F6C /* MediaManager.m in Sources */,
 			);

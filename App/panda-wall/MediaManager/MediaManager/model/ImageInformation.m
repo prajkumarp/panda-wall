@@ -16,9 +16,7 @@
     [formatter setDateFormat:@"MM-dd-yyyy"];
     NSString *stringFromDate = [formatter stringFromDate:_timeStamp];
     return stringFromDate;
-    
     formatter = nil ;
-
 }
 
 

@@ -41,6 +41,7 @@
         if(imagesReceived){
             imageCollection = imagesReceived;
             NSLog(@"%@",imageCollection);
+            [[self collectionView] reloadData];
         }
     }];
     
@@ -99,7 +100,7 @@
     
     ImageInformation *imageInfoAtIndex = [imageCollection objectAtIndex:[indexPath row]];
     [myCell setImageDetails:imageInfoAtIndex];
-    [[myCell thumbnailImage] setImage:[UIImage imageNamed:[imageInfoAtIndex imagePath]]];
+    [[myCell thumbnailImage] setImage:[imageInfoAtIndex thumbNail]];
 
     
     return myCell;
@@ -108,7 +109,7 @@
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(30, 30);
+    return CGSizeMake(40, 40);
 }
 
 

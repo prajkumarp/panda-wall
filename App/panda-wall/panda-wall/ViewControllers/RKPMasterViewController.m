@@ -30,9 +30,19 @@
 
 - (void)viewDidLoad
 {
+    
+    imageCollection = [[NSArray alloc] init];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.detailViewController = (RKPDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    [MediaManager myMethod:^(NSArray *imagesReceived) {
+        if(imagesReceived){
+            imageCollection = imagesReceived;
+            NSLog(@"%@",imageCollection);
+        }
+    }];
     
 }
 
@@ -59,7 +69,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"iphonePicDetails"]) {
-        [[segue destinationViewController] setPassonImage:[UIImage imageNamed:selectedImage]];
+        if ([sender isKindOfClass:[RKPThumbnailCell class]]) {
+            RKPThumbnailCell *senderCell = (RKPThumbnailCell *)sender;
+            [[segue destinationViewController] setPassonImageDetails:senderCell];
+        }
+        
     }
 }
 
@@ -73,7 +87,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 100;
+    return [imageCollection count];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
@@ -83,10 +97,10 @@
                                     dequeueReusableCellWithReuseIdentifier:@"ThumbNailCell"
                                     forIndexPath:indexPath];
     
-    UIImage *image;
-    image = [UIImage imageNamed:@"vcard"];
-    
-    myCell.thumbnailImage.image = image;
+    ImageInformation *imageInfoAtIndex = [imageCollection objectAtIndex:[indexPath row]];
+    [myCell setImageDetails:imageInfoAtIndex];
+    [[myCell thumbnailImage] setImage:[UIImage imageNamed:[imageInfoAtIndex imagePath]]];
+
     
     return myCell;
 }
@@ -97,10 +111,6 @@
     return CGSizeMake(30, 30);
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    selectedImage = @"vcard";
-}
 
 
 @end

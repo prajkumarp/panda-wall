@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "RKPThumbnailCell.h"
+#import "MediaManager/MediaManager.h"
+
 
 @class RKPDetailViewController;
 
-@interface RKPMasterViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface RKPMasterViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>{
+    
+    NSArray *imageCollection;
+}
 
 @property (strong, nonatomic) RKPDetailViewController *detailViewController;
 

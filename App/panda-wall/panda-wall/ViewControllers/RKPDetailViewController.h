@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RKPThumbnailCell.h"
 
 @interface RKPDetailViewController : UIViewController <UISplitViewControllerDelegate>
 
-@property (nonatomic, strong) UIImage *passonImage;
+@property (nonatomic, strong) RKPThumbnailCell *passonImageDetails;
 @property (nonatomic, strong) IBOutlet UIImageView *fullSizeImage;
 @property (nonatomic, strong) IBOutlet UILabel *imageTimeStamp;
 @property (nonatomic, strong) IBOutlet UILabel *imageGeoTag;

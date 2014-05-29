@@ -10,4 +10,8 @@
 
 @interface MediaManager : NSObject
 
+typedef void(^myCompletion)(NSArray *);
+
++(void) myMethod:(myCompletion) compblock;
+
 @end

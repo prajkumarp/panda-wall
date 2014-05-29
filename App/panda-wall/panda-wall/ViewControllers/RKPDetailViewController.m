@@ -1,10 +1,10 @@
-//
-//  RKPDetailViewController.m
-//  panda-wall
-//
-//  Created by Panneerselvam, Rajkumar on 5/28/14.
-//  Copyright (c) 2014 Panneerselvam, Rajkumar. All rights reserved.
-//
+    //
+    //  RKPDetailViewController.m
+    //  panda-wall
+    //
+    //  Created by Panneerselvam, Rajkumar on 5/28/14.
+    //  Copyright (c) 2014 Panneerselvam, Rajkumar. All rights reserved.
+    //
 
 #import "RKPDetailViewController.h"
 #import <ImageIO/ImageIO.h>
@@ -19,19 +19,17 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
-    [_fullSizeImage setImage:_passonImage];
-    
-    NSDictionary *metaData = [self extractImageMetaData:_passonImage];
-    
-    NSLog(@"Metadata %@",metaData);
-    
+    [_fullSizeImage setImage:[[_passonImageDetails thumbnailImage] image]];
+    [_imageTimeStamp setText:[[_passonImageDetails imageDetails] getDateandTime]];
+    [self updateImageLocation:[[_passonImageDetails imageDetails] geoTag]];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+        // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Split view
@@ -45,20 +43,29 @@
 
 - (void)splitViewController:(UISplitViewController *)splitController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
 {
-    // Called when the view is shown again in the split view, invalidating the button and popover controller.
+        // Called when the view is shown again in the split view, invalidating the button and popover controller.
     [self.navigationItem setLeftBarButtonItem:nil animated:YES];
     self.masterPopoverController = nil;
 }
 
-- (NSDictionary*) extractImageMetaData:(UIImage*)image
-{
-    NSData *jpeg = [NSData dataWithData:UIImagePNGRepresentation(image)];
-    CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)jpeg, NULL);
-    CFDictionaryRef imageMetaData = CGImageSourceCopyPropertiesAtIndex(source,0,NULL);
-    NSLog (@"imageMetaData %@",imageMetaData);
-    return (__bridge NSDictionary *)(imageMetaData);
+- (void)updateImageLocation:(CLLocation *)geoTag{
+    
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init] ;
+    [geocoder reverseGeocodeLocation:geoTag completionHandler:^(NSArray *placemarks, NSError *error)
+     {
+     if (!(error))
+         {
+         CLPlacemark *placemark = [placemarks objectAtIndex:0];
+         NSString *Area = [[NSString alloc]initWithString:placemark.locality];
+         NSString *Country = [[NSString alloc]initWithString:placemark.country];
+         [_imageGeoTag setText:[NSString stringWithFormat:@"%@, %@",Area,Country]];
+         }
+     else
+         {
+         [_imageGeoTag setText:@"Location not found" ];
+         }
+     }];
 }
-
 
 
 @end

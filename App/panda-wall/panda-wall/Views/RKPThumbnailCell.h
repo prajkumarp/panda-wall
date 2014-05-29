@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MediaManager/ImageInformation.h"
 
 @interface RKPThumbnailCell : UICollectionViewCell
 
-@property (strong, nonatomic) IBOutlet UIImageView *thumbnailImage;
+@property (strong) IBOutlet UIImageView *thumbnailImage;
+@property (strong)  ImageInformation *imageDetails;
 
 @end

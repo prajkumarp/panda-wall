@@ -27,6 +27,8 @@
 		23E1469D19367852007F0F6C /* vcard.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E1469B19367852007F0F6C /* vcard.png */; };
 		23E1469E19367852007F0F6C /* vcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E1469C19367852007F0F6C /* vcard@2x.png */; };
 		23E146A019368ADD007F0F6C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1469F19368ADD007F0F6C /* ImageIO.framework */; };
+		23E1471F1936E656007F0F6C /* libMediaManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1471C1936E632007F0F6C /* libMediaManager.a */; };
+		23E1472A1936F09E007F0F6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E147291936F09E007F0F6C /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,18 +39,18 @@
 			remoteGlobalIDString = 23E1460819366A3A007F0F6C;
 			remoteInfo = "panda-wall";
 		};
-		23E1467E19366B3D007F0F6C /* PBXContainerItemProxy */ = {
+		23E1471B1936E632007F0F6C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 23E1467919366B3C007F0F6C /* MediaManager.xcodeproj */;
+			containerPortal = 23E147161936E631007F0F6C /* MediaManager.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 23E1465019366B3C007F0F6C;
+			remoteGlobalIDString = 23E146ED1936E631007F0F6C;
 			remoteInfo = MediaManager;
 		};
-		23E1468019366B3D007F0F6C /* PBXContainerItemProxy */ = {
+		23E1471D1936E632007F0F6C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 23E1467919366B3C007F0F6C /* MediaManager.xcodeproj */;
+			containerPortal = 23E147161936E631007F0F6C /* MediaManager.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 23E1466019366B3C007F0F6C;
+			remoteGlobalIDString = 23E146FD1936E631007F0F6C;
 			remoteInfo = MediaManagerTests;
 		};
 /* End PBXContainerItemProxy section */
@@ -69,7 +71,6 @@
 		23E1463919366A3B007F0F6C /* panda-wallTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "panda-wallTests-Info.plist"; sourceTree = "<group>"; };
 		23E1463B19366A3B007F0F6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		23E1463D19366A3B007F0F6C /* panda_wallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = panda_wallTests.m; sourceTree = "<group>"; };
-		23E1467919366B3C007F0F6C /* MediaManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MediaManager.xcodeproj; path = MediaManager/MediaManager.xcodeproj; sourceTree = "<group>"; };
 		23E14687193675A5007F0F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		23E14689193675A5007F0F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		23E1468A193675A5007F0F6C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -82,6 +83,8 @@
 		23E1469B19367852007F0F6C /* vcard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vcard.png; sourceTree = "<group>"; };
 		23E1469C19367852007F0F6C /* vcard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vcard@2x.png"; sourceTree = "<group>"; };
 		23E1469F19368ADD007F0F6C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		23E147161936E631007F0F6C /* MediaManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MediaManager.xcodeproj; path = MediaManager/MediaManager.xcodeproj; sourceTree = "<group>"; };
+		23E147291936F09E007F0F6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E1472A1936F09E007F0F6C /* CoreLocation.framework in Frameworks */,
+				23E1471F1936E656007F0F6C /* libMediaManager.a in Frameworks */,
 				23E146A019368ADD007F0F6C /* ImageIO.framework in Frameworks */,
 				23E1460F19366A3A007F0F6C /* CoreGraphics.framework in Frameworks */,
 				23E1461119366A3A007F0F6C /* UIKit.framework in Frameworks */,
@@ -131,8 +136,9 @@
 		23E1460B19366A3A007F0F6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23E147291936F09E007F0F6C /* CoreLocation.framework */,
+				23E147161936E631007F0F6C /* MediaManager.xcodeproj */,
 				23E1469F19368ADD007F0F6C /* ImageIO.framework */,
-				23E1467919366B3C007F0F6C /* MediaManager.xcodeproj */,
 				23E1460C19366A3A007F0F6C /* Foundation.framework */,
 				23E1460E19366A3A007F0F6C /* CoreGraphics.framework */,
 				23E1461019366A3A007F0F6C /* UIKit.framework */,
@@ -183,15 +189,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		23E1467A19366B3C007F0F6C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				23E1467F19366B3D007F0F6C /* libMediaManager.a */,
-				23E1468119366B3D007F0F6C /* MediaManagerTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		23E14685193675A5007F0F6C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +235,15 @@
 				23E1469C19367852007F0F6C /* vcard@2x.png */,
 			);
 			path = SampleImage;
+			sourceTree = "<group>";
+		};
+		23E147171936E631007F0F6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23E1471C1936E632007F0F6C /* libMediaManager.a */,
+				23E1471E1936E632007F0F6C /* MediaManagerTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,8 +312,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 23E1467A19366B3C007F0F6C /* Products */;
-					ProjectRef = 23E1467919366B3C007F0F6C /* MediaManager.xcodeproj */;
+					ProductGroup = 23E147171936E631007F0F6C /* Products */;
+					ProjectRef = 23E147161936E631007F0F6C /* MediaManager.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -319,18 +325,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		23E1467F19366B3D007F0F6C /* libMediaManager.a */ = {
+		23E1471C1936E632007F0F6C /* libMediaManager.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libMediaManager.a;
-			remoteRef = 23E1467E19366B3D007F0F6C /* PBXContainerItemProxy */;
+			remoteRef = 23E1471B1936E632007F0F6C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		23E1468119366B3D007F0F6C /* MediaManagerTests.xctest */ = {
+		23E1471E1936E632007F0F6C /* MediaManagerTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = MediaManagerTests.xctest;
-			remoteRef = 23E1468019366B3D007F0F6C /* PBXContainerItemProxy */;
+			remoteRef = 23E1471D1936E632007F0F6C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -507,6 +513,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "panda-wall/panda-wall-Prefix.pch";
 				INFOPLIST_FILE = "panda-wall/panda-wall-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MediaManager/build/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-objC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -521,6 +532,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "panda-wall/panda-wall-Prefix.pch";
 				INFOPLIST_FILE = "panda-wall/panda-wall-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MediaManager/build/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-objC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

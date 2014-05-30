@@ -14,13 +14,15 @@
 +(void) fetchImages:(imageFetcherCompletion) fetcherCompletionBlock{
     
     NSMutableArray *imageCollection  = [[NSMutableArray alloc] init];
-
+    
     ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
-
+    
     [assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
         [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
             if(result){
-                [imageCollection addObject:result];
+                if ([[result valueForProperty:ALAssetPropertyType] isEqualToString:ALAssetTypePhoto]){
+                    [imageCollection addObject:result];
+                }
             }
         }];
         

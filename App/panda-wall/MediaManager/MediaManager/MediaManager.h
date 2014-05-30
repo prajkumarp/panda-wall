@@ -12,6 +12,6 @@
 
 typedef void(^myCompletion)(NSArray *);
 
-+(void) myMethod:(myCompletion) compblock;
++(void) fetchImages:(myCompletion) compblock;
 
 @end

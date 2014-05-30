@@ -37,7 +37,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.detailViewController = (RKPDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
-    [MediaManager myMethod:^(NSArray *imagesReceived) {
+    [MediaManager fetchImages:^(NSArray *imagesReceived) {
         if(imagesReceived){
             imageCollection = imagesReceived;
             NSLog(@"%@",imageCollection);

@@ -607,6 +607,7 @@
 				23E1464319366A3B007F0F6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23E1464419366A3B007F0F6C /* Build configuration list for PBXNativeTarget "panda-wallTests" */ = {
 			isa = XCConfigurationList;
@@ -615,6 +616,7 @@
 				23E1464619366A3B007F0F6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

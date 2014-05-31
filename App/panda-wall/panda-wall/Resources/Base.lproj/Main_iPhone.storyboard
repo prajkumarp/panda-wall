@@ -88,27 +88,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="653-6F-zfZ">
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="653-6F-zfZ">
                                 <rect key="frame" x="10" y="70" width="300" height="408"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Et-kg-Q3K">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Et-kg-Q3K">
                                 <rect key="frame" x="10" y="486" width="31" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="LdF-GX-8Xf"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sqf-SK-GjF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sqf-SK-GjF">
                                 <rect key="frame" x="10" y="527" width="31" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="RwW-ub-30T"/>
+                                    <constraint firstAttribute="width" constant="31" id="hqV-VB-ueA"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZR-nc-LdT">
-                                <rect key="frame" x="49" y="498" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZR-nc-LdT">
+                                <rect key="frame" x="49" y="494" width="261" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDJ-0b-Rbt">
-                                <rect key="frame" x="49" y="532" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDJ-0b-Rbt">
+                                <rect key="frame" x="51" y="532" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -116,8 +123,25 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bZR-nc-LdT" firstAttribute="leading" secondItem="6Et-kg-Q3K" secondAttribute="trailing" constant="8" symbolic="YES" id="9Xi-Nx-G2z"/>
+                            <constraint firstAttribute="bottom" secondItem="VDJ-0b-Rbt" secondAttribute="bottom" constant="15" id="IWx-Ge-rol"/>
+                            <constraint firstItem="VDJ-0b-Rbt" firstAttribute="top" secondItem="bZR-nc-LdT" secondAttribute="bottom" constant="17" id="J6B-dA-ovf"/>
+                            <constraint firstItem="sqf-SK-GjF" firstAttribute="top" secondItem="6Et-kg-Q3K" secondAttribute="bottom" constant="8" id="PB6-YM-Bv4"/>
+                            <constraint firstItem="653-6F-zfZ" firstAttribute="top" secondItem="MMQ-IT-qOo" secondAttribute="top" constant="70" id="W6T-6H-p5f"/>
+                            <constraint firstAttribute="trailing" secondItem="653-6F-zfZ" secondAttribute="trailing" constant="10" id="fOo-XO-Fio"/>
+                            <constraint firstItem="sqf-SK-GjF" firstAttribute="trailing" secondItem="6Et-kg-Q3K" secondAttribute="trailing" id="fYp-63-KAe"/>
+                            <constraint firstItem="6Et-kg-Q3K" firstAttribute="top" secondItem="653-6F-zfZ" secondAttribute="bottom" constant="8" id="iRf-u7-0mr"/>
+                            <constraint firstItem="sqf-SK-GjF" firstAttribute="leading" secondItem="6Et-kg-Q3K" secondAttribute="leading" id="ii8-co-Lht"/>
+                            <constraint firstItem="sqf-SK-GjF" firstAttribute="leading" secondItem="653-6F-zfZ" secondAttribute="leading" id="meM-3D-Ppd"/>
+                            <constraint firstItem="653-6F-zfZ" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="10" id="qRW-95-bpO"/>
+                            <constraint firstAttribute="bottom" secondItem="sqf-SK-GjF" secondAttribute="bottom" constant="10" id="sBu-EM-dXe"/>
+                            <constraint firstItem="bZR-nc-LdT" firstAttribute="top" secondItem="653-6F-zfZ" secondAttribute="bottom" constant="16" id="sbm-2s-ejU"/>
+                            <constraint firstItem="VDJ-0b-Rbt" firstAttribute="leading" secondItem="sqf-SK-GjF" secondAttribute="trailing" constant="10" id="txf-Nv-9lA"/>
+                            <constraint firstItem="bZR-nc-LdT" firstAttribute="trailing" secondItem="653-6F-zfZ" secondAttribute="trailing" id="xUm-I2-aPU"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="jop-BD-orA">
+                    <navigationItem key="navigationItem" id="jop-BD-orA">
                         <barButtonItem key="backBarButtonItem" title="Album" id="vxa-zc-60y"/>
                     </navigationItem>
                     <connections>
@@ -132,6 +156,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pin.jpg" width="250" height="320"/>
+        <image name="time.png" width="256" height="256"/>
         <image name="vcard.png" width="100" height="100"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

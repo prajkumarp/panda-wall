@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MediaManager/ImageInformation.h"
+#import "MediaManager/ImageAlbum.h"
 
 @interface RKPThumbnailCell : UICollectionViewCell
 

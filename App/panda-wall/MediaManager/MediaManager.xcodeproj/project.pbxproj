@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23BA728419399ED400355E0E /* ImageAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BA728319399ED400355E0E /* ImageAlbum.m */; };
+		23BA72851939A34700355E0E /* ImageAlbum.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23BA728219399ED400355E0E /* ImageAlbum.h */; };
 		23E146F11936E631007F0F6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E146F01936E631007F0F6C /* Foundation.framework */; };
 		23E146F61936E631007F0F6C /* MediaManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23E146F51936E631007F0F6C /* MediaManager.h */; };
 		23E146F81936E631007F0F6C /* MediaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E146F71936E631007F0F6C /* MediaManager.m */; };
@@ -40,6 +42,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				23BA72851939A34700355E0E /* ImageAlbum.h in CopyFiles */,
 				23E1472B1936F0CA007F0F6C /* ImageInformation.h in CopyFiles */,
 				23E146F61936E631007F0F6C /* MediaManager.h in CopyFiles */,
 			);
@@ -48,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		23BA728219399ED400355E0E /* ImageAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAlbum.h; sourceTree = "<group>"; };
+		23BA728319399ED400355E0E /* ImageAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAlbum.m; sourceTree = "<group>"; };
 		23E146ED1936E631007F0F6C /* libMediaManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMediaManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E146F01936E631007F0F6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		23E146F41936E631007F0F6C /* MediaManager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MediaManager-Prefix.pch"; sourceTree = "<group>"; };
@@ -166,6 +171,8 @@
 			children = (
 				23E147241936EDAC007F0F6C /* ImageInformation.h */,
 				23E147251936EDAC007F0F6C /* ImageInformation.m */,
+				23BA728219399ED400355E0E /* ImageAlbum.h */,
+				23BA728319399ED400355E0E /* ImageAlbum.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -263,6 +270,7 @@
 				23E1473419377701007F0F6C /* ImageHelper.m in Sources */,
 				23E147261936EDAC007F0F6C /* ImageInformation.m in Sources */,
 				23E146F81936E631007F0F6C /* MediaManager.m in Sources */,
+				23BA728419399ED400355E0E /* ImageAlbum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +451,7 @@
 				23E147121936E631007F0F6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23E147131936E631007F0F6C /* Build configuration list for PBXNativeTarget "MediaManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +460,7 @@
 				23E147151936E631007F0F6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

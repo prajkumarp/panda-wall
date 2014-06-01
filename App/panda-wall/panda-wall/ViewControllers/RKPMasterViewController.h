@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RKPThumbnailCell.h"
+#import "RKPSectionHeaderCell.h"
 #import "MediaManager/MediaManager.h"
 
 

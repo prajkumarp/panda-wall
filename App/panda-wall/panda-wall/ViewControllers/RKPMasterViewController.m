@@ -40,7 +40,7 @@
     
     [MediaManager fetchImages:^(NSArray *imagesReceived) {
         if(imagesReceived){
-            imageCollection = imagesReceived;
+            [self setImageCollectionInstance:imagesReceived];
             [[self collectionView] reloadData];
         }
     }];
@@ -106,20 +106,19 @@
 #pragma mark -
 #pragma mark Private convenience methods
 
-- (UICollectionReusableView *)createSectionHeaderCell:(NSIndexPath *)indexPath{
+- (void)setImageCollectionInstance:(NSArray *)imagesReceived{
+    imageCollection = imagesReceived;
+}
+
+- (RKPSectionHeaderCell *)createSectionHeaderCell:(NSIndexPath *)indexPath{
+    
+    RKPSectionHeaderCell *headerView = [[self collectionView] dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"SecHeader" forIndexPath:indexPath];
     
     ImageAlbum *album =  [imageCollection objectAtIndex:[indexPath section]];
+    [headerView initialize];
     
-    UICollectionReusableView *headerView = [[self collectionView] dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"SecHeader" forIndexPath:indexPath];
-    
-    if (headerView==nil) {
-        headerView=[[UICollectionReusableView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-    }
-    
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, 320, 30)];
-    label.text = [NSString stringWithFormat:@"%@",[album albumName]];
-    [headerView addSubview:label];
-    
+    [[headerView sectionHeader] setText:[NSString stringWithFormat:@"%@",[album albumName]]];
+
     return headerView;
 
 }

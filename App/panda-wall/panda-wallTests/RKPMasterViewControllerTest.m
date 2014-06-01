@@ -10,11 +10,18 @@
 #import "RKPMasterViewController.h"
 #import "RKPThumbnailCell.h"
 
+
+#define ktestAlbum1Name @"testAlbum1"
+#define ktestAlbum2Name @"testAlbum2"
+#define ktestImageDate @"20140602"
+
+
 @interface RKPMasterViewController(UnitTests)
 
 - (UICollectionReusableView *)createSectionHeaderCell:(NSIndexPath *)indexPath;
 - (RKPThumbnailCell *)createImageThumbnailCell:(NSIndexPath *)indexPath;
 - (void)setAccessibilityforCell:(UICollectionViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (void)setImageCollectionInstance:(NSArray *)imagesReceived;
 
 @end
 
@@ -26,18 +33,57 @@
 
 @implementation RKPMasterViewControllerTest
 
+#pragma mark-
+#pragma mark Setup
+
 - (void)setUp
 {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
-    _controller = [storyboard instantiateViewControllerWithIdentifier:@"main"];
+    _controller = [storyboard instantiateViewControllerWithIdentifier:@"iPhoneMasterView"];
     [_controller performSelectorOnMainThread:@selector(loadView) withObject:nil waitUntilDone:YES];
+    
+//    [self populateImageCollection];
 }
 
-- (void)testImageGeneration{
+- (void)populateImageCollection{
     
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyyMMdd"];
+    
+//    Test image information
+    UIImage *testImagethumbNail =[[UIImage alloc] init];
+    NSURL *testURL = [[NSURL alloc] initWithString:@"test url"];
+    NSDate *testImagedate = [dateFormat dateFromString:ktestImageDate];
+    CLLocation *testLocation = [[CLLocation alloc] initWithLatitude:20.0060893 longitude:-102.7813159];
+    
+    ImageInformation *testImage1Info = [[ImageInformation alloc] init];
+    [testImage1Info setThumbNail:testImagethumbNail];
+    [testImage1Info setAssetURL:testURL];
+    [testImage1Info setTimeStamp:testImagedate];
+    [testImage1Info setGeoTag:testLocation];
+    
+    ImageInformation *testImage2Info = [[ImageInformation alloc] init];
+    [testImage2Info setThumbNail:testImagethumbNail];
+    [testImage2Info setAssetURL:testURL];
+    [testImage2Info setTimeStamp:testImagedate];
+    [testImage2Info setGeoTag:testLocation];
+
+    ImageAlbum *testAlbum1 = [[ImageAlbum alloc] init];
+    [testAlbum1 setAlbumName:ktestAlbum1Name];
+    [testAlbum1 setImageCollection:[[NSArray alloc] initWithObjects:testImage1Info,testImage2Info, nil]];
+    
+    ImageAlbum *testAlbum2 = [[ImageAlbum alloc] init];
+    [testAlbum2 setAlbumName:ktestAlbum2Name];
+    [testAlbum2 setImageCollection:[[NSArray alloc] initWithObjects:testImage1Info,testImage2Info, nil]];
+    
+     NSMutableArray *testImageCollection = [[NSMutableArray alloc] init];
+    [testImageCollection addObject:testAlbum1];
+    [testImageCollection addObject:testAlbum2];
+    
+    [_controller setImageCollectionInstance:testImageCollection];
 }
 
 - (void)tearDown
@@ -46,9 +92,9 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
+#pragma mark-
+#pragma mark Unit test
+
+
 
 @end

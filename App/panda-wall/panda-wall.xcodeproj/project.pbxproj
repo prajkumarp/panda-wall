@@ -34,6 +34,8 @@
 		23E1471F1936E656007F0F6C /* libMediaManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1471C1936E632007F0F6C /* libMediaManager.a */; };
 		23E1472A1936F09E007F0F6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E147291936F09E007F0F6C /* CoreLocation.framework */; };
 		23E1473619377A70007F0F6C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1473519377A70007F0F6C /* AssetsLibrary.framework */; };
+		EE09D2D4193ACF61002A83A5 /* RKPMasterViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE09D2D3193ACF61002A83A5 /* RKPMasterViewControllerTest.m */; };
+		EE09D2D9193AE741002A83A5 /* RKPSectionHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE09D2D8193AE741002A83A5 /* RKPSectionHeaderCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,9 @@
 		23E147161936E631007F0F6C /* MediaManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MediaManager.xcodeproj; path = MediaManager/MediaManager.xcodeproj; sourceTree = "<group>"; };
 		23E147291936F09E007F0F6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		23E1473519377A70007F0F6C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		EE09D2D3193ACF61002A83A5 /* RKPMasterViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKPMasterViewControllerTest.m; sourceTree = "<group>"; };
+		EE09D2D7193AE741002A83A5 /* RKPSectionHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKPSectionHeaderCell.h; sourceTree = "<group>"; };
+		EE09D2D8193AE741002A83A5 /* RKPSectionHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKPSectionHeaderCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +191,7 @@
 		23E1463719366A3B007F0F6C /* panda-wallTests */ = {
 			isa = PBXGroup;
 			children = (
+				EE09D2D3193ACF61002A83A5 /* RKPMasterViewControllerTest.m */,
 				23E1463D19366A3B007F0F6C /* panda_wallTests.m */,
 				23E1463819366A3B007F0F6C /* Supporting Files */,
 			);
@@ -217,6 +223,8 @@
 			children = (
 				23E1468C193675A5007F0F6C /* RKPThumbnailCell.h */,
 				23E1468D193675A5007F0F6C /* RKPThumbnailCell.m */,
+				EE09D2D7193AE741002A83A5 /* RKPSectionHeaderCell.h */,
+				EE09D2D8193AE741002A83A5 /* RKPSectionHeaderCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -392,6 +400,7 @@
 			files = (
 				23E1461D19366A3A007F0F6C /* RKPAppDelegate.m in Sources */,
 				23E14696193675A5007F0F6C /* RKPThumbnailCell.m in Sources */,
+				EE09D2D9193AE741002A83A5 /* RKPSectionHeaderCell.m in Sources */,
 				23E1461919366A3A007F0F6C /* main.m in Sources */,
 				23E14698193675A5007F0F6C /* RKPMasterViewController.m in Sources */,
 				23E14697193675A5007F0F6C /* RKPDetailViewController.m in Sources */,
@@ -402,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE09D2D4193ACF61002A83A5 /* RKPMasterViewControllerTest.m in Sources */,
 				23E1463E19366A3B007F0F6C /* panda_wallTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,6 +550,7 @@
 				);
 				OTHER_LDFLAGS = "-objC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -560,6 +571,7 @@
 				);
 				OTHER_LDFLAGS = "-objC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

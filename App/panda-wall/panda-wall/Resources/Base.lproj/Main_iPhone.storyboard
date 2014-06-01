@@ -62,7 +62,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SecHeader" id="Il8-UB-Ac5">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SecHeader" id="Il8-UB-Ac5" customClass="RKPSectionHeaderCell">
                             <rect key="frame" x="0.0" y="64" width="320" height="30"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <color key="backgroundColor" white="0.93274319556451613" alpha="1" colorSpace="calibratedWhite"/>

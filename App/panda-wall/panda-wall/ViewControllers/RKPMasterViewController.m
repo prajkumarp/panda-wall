@@ -89,15 +89,20 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    RKPThumbnailCell *thumbnailCell = [self createImageThumbnailCell:indexPath];
-    [self setAccessibilityforCell:thumbnailCell atIndexPath:indexPath];
+    RKPThumbnailCell *thumbnailCell = [[self collectionView]
+                              dequeueReusableCellWithReuseIdentifier:@"ThumbNailCell"
+                              forIndexPath:indexPath];
+    
+    [self updateImageThumbnailCell:indexPath ImageThumnailView:thumbnailCell];
     return thumbnailCell;
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     if (kind == UICollectionElementKindSectionHeader) {
-        UICollectionReusableView *headerView = [self createSectionHeaderCell:indexPath];
+        
+        RKPSectionHeaderCell *headerView = [[self collectionView] dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"SecHeader" forIndexPath:indexPath];
+        [self updateSectionHeaderCell:indexPath SectionHeaderCell:headerView];
         return headerView;
     }
     return nil;
@@ -110,32 +115,21 @@
     imageCollection = imagesReceived;
 }
 
-- (RKPSectionHeaderCell *)createSectionHeaderCell:(NSIndexPath *)indexPath{
-    
-    RKPSectionHeaderCell *headerView = [[self collectionView] dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"SecHeader" forIndexPath:indexPath];
-    
+- (void)updateSectionHeaderCell:(NSIndexPath *)indexPath SectionHeaderCell:(RKPSectionHeaderCell *)headerView {
     ImageAlbum *album =  [imageCollection objectAtIndex:[indexPath section]];
     [headerView initialize];
-    
     [[headerView sectionHeader] setText:[NSString stringWithFormat:@"%@",[album albumName]]];
-
-    return headerView;
 
 }
 
-- (RKPThumbnailCell *)createImageThumbnailCell:(NSIndexPath *)indexPath{
-    
-    RKPThumbnailCell *cell = [[self collectionView]
-                                dequeueReusableCellWithReuseIdentifier:@"ThumbNailCell"
-                                forIndexPath:indexPath];
+- (void)updateImageThumbnailCell:(NSIndexPath *)indexPath ImageThumnailView:(RKPThumbnailCell *)cell{
     
     ImageAlbum *album = [imageCollection objectAtIndex:[indexPath section]];
-    
     ImageInformation *imageInfoAtIndex = [[album imageCollection] objectAtIndex:[indexPath row]];
     [cell setImageDetails:imageInfoAtIndex];
     [[cell thumbnailImage] setImage:[imageInfoAtIndex thumbNail]];
     
-    return cell;
+    [self setAccessibilityforCell:cell atIndexPath:indexPath];
 }
 
 

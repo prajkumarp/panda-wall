@@ -16,10 +16,11 @@
 #define ktestImageDate @"20140602"
 
 
+
 @interface RKPMasterViewController(UnitTests)
 
-- (UICollectionReusableView *)createSectionHeaderCell:(NSIndexPath *)indexPath;
-- (RKPThumbnailCell *)createImageThumbnailCell:(NSIndexPath *)indexPath;
+- (void)updateSectionHeaderCell:(NSIndexPath *)indexPath SectionHeaderCell:(RKPSectionHeaderCell *)headerView;
+- (void)updateImageThumbnailCell:(NSIndexPath *)indexPath ImageThumnailView:(RKPThumbnailCell *)cell;
 - (void)setAccessibilityforCell:(UICollectionViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 - (void)setImageCollectionInstance:(NSArray *)imagesReceived;
 
@@ -45,7 +46,7 @@
     _controller = [storyboard instantiateViewControllerWithIdentifier:@"iPhoneMasterView"];
     [_controller performSelectorOnMainThread:@selector(loadView) withObject:nil waitUntilDone:YES];
     
-//    [self populateImageCollection];
+    [self populateImageCollection];
 }
 
 - (void)populateImageCollection{
@@ -95,6 +96,32 @@
 #pragma mark-
 #pragma mark Unit test
 
+- (void) testHeaderSectionCreations{
+    
+    NSIndexPath *testIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    
+    RKPSectionHeaderCell *cell = [[RKPSectionHeaderCell alloc] init];
+    
+    [_controller updateSectionHeaderCell:testIndexPath SectionHeaderCell:cell];
+    
+    XCTAssertTrue([[[cell sectionHeader] text] isEqualToString:ktestAlbum1Name], @"The album name should match the populated section header");
+}
+
+
+- (void) testThumbnailCellAccessibilty{
+    NSIndexPath *testIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    
+    RKPThumbnailCell *cell = [[RKPThumbnailCell alloc] init];
+    
+    [_controller updateImageThumbnailCell:testIndexPath ImageThumnailView:cell];
+    
+    XCTAssertEqual([cell accessibilityTraits], UIAccessibilityTraitButton, @"Cell should be treated as button click on accesibilty");
+    
+    XCTAssertTrue([[cell accessibilityLabel] isEqualToString:@"Image number 1"], @"Cell accessibilty lable to match the index path");
+    
+    XCTAssertTrue([[cell accessibilityHint] isEqualToString:@"Double tap to open the image number 1"], @"Cell accessibilty hint to match the index path");
+    
+}
 
 
 @end

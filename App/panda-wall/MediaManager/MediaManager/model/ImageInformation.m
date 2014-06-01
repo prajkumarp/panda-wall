@@ -19,5 +19,11 @@
     formatter = nil ;
 }
 
+- (void) releaseData{
+//    _thumbNail = nil;
+//    _assetURL = nil;
+//    _geoTag = nil;
+//    _timeStamp = nil;
+}
 
 @end

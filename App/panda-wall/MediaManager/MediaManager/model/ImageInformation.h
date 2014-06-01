@@ -18,5 +18,5 @@
 @property (strong) NSDate *timeStamp;
 
 - (NSString *)getDateandTime;
-
+- (void) releaseData;
 @end

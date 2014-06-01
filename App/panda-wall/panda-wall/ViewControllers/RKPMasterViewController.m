@@ -37,14 +37,28 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.detailViewController = (RKPDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
-    [MediaManager fetchImages:^(NSArray *imagesReceived) {
-        if(imagesReceived){
-            imageCollection = imagesReceived;
-            NSLog(@"%@",imageCollection);
-            [[self collectionView] reloadData];
-        }
-    }];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ROFL"
+                                                    message:@"Dee dee doo doo."
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
     
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    // the user clicked OK
+    if (buttonIndex == 0) {
+        [MediaManager fetchImages:^(NSArray *imagesReceived) {
+            if(imagesReceived){
+                imageCollection = imagesReceived;
+                NSLog(@"%@",imageCollection);
+                [[self collectionView] reloadData];
+            }
+        }];
+
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -108,20 +122,21 @@
     [[myCell thumbnailImage] setImage:[imageInfoAtIndex thumbNail]];
 
     
+   [self setAccessibilityforCell:myCell atIndexPath:indexPath];
     return myCell;
 }
 
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(40, 40);
+    return CGSizeMake(70, 70);
 }
 
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
-    UIEdgeInsets insets=UIEdgeInsetsMake(10, 10, 10, 10);
-    return insets;
-}
+//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+//{
+//    UIEdgeInsets insets=UIEdgeInsetsMake(1, 1, 1, 1);
+//    return insets;
+//}
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
@@ -145,6 +160,13 @@
     return nil;
 }
 
+
+- (void)setAccessibilityforCell:(UICollectionViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
+    [cell setAccessibilityTraits:UIAccessibilityTraitButton];
+    [cell setIsAccessibilityElement:YES];
+    [cell setAccessibilityHint:[NSString stringWithFormat:@"Double tap to open the image number %i",[indexPath row]+1]];
+    [cell setAccessibilityLabel:[NSString stringWithFormat:@"Image number %i",[indexPath row]+1]];
+}
 
 
 @end

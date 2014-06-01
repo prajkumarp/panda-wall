@@ -23,14 +23,11 @@
     
         // setup our failure view controller in case enumerateGroupsWithTypes fails
     ALAssetsLibraryAccessFailureBlock failureBlock = ^(NSError *error) {
-        NSString *errorMessage = nil;
         switch ([error code]) {
             case ALAssetsLibraryAccessUserDeniedError:
             case ALAssetsLibraryAccessGloballyDeniedError:
-                errorMessage = @"The user has declined access to it.";
                 break;
             default:
-                errorMessage = @"Reason unknown.";
                 break;
         }
     };
@@ -56,13 +53,18 @@
                     NSDate * date = [result valueForProperty:ALAssetPropertyDate];
                     
                     ImageInformation *tempImageInfo = [[ImageInformation alloc] init];
+                    UIImage *thumbNail =[[UIImage alloc] initWithCGImage:[result thumbnail]];
                     
-                    [tempImageInfo setThumbNail:[UIImage imageWithCGImage:[result thumbnail]]];
+                    [tempImageInfo setThumbNail:thumbNail];
                     [tempImageInfo setAssetURL:[representation url]];
                     [tempImageInfo setTimeStamp:date];
                     [tempImageInfo setGeoTag:imageLoc];
                     
                     [images addObject:tempImageInfo];
+                    
+                    thumbNail = nil;
+                    tempImageInfo = nil;
+                    representation = nil;
                     
                 }
             }];
@@ -70,6 +72,8 @@
             [newAlbum setImageCollection:images];
             
             [imageCollection addObject:newAlbum];
+                
+                newAlbum = nil;
 
             }
             fetcherCompletionBlock(imageCollection);

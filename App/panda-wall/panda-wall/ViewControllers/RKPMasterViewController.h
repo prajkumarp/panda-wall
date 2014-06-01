@@ -13,7 +13,7 @@
 
 @class RKPDetailViewController;
 
-@interface RKPMasterViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>{
+@interface RKPMasterViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate,UIAlertViewDelegate>{
     
     NSArray *imageCollection;
 }

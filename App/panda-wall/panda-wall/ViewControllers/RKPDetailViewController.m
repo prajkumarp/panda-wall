@@ -37,6 +37,7 @@
         [[self fullSizeImage] setImage:[UIImage imageWithCGImage:imageref]];
     }
     
+        imageref = nil;
     };
     
     

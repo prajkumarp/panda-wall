@@ -34,31 +34,16 @@
     imageCollection = [[NSArray alloc] init];
     
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     self.detailViewController = (RKPDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ROFL"
-                                                    message:@"Dee dee doo doo."
-                                                   delegate:self
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
-    
-    
-}
-
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    // the user clicked OK
-    if (buttonIndex == 0) {
-        [MediaManager fetchImages:^(NSArray *imagesReceived) {
-            if(imagesReceived){
-                imageCollection = imagesReceived;
-                NSLog(@"%@",imageCollection);
-                [[self collectionView] reloadData];
-            }
-        }];
-
-    }
+    [MediaManager fetchImages:^(NSArray *imagesReceived) {
+        if(imagesReceived){
+            imageCollection = imagesReceived;
+            [[self collectionView] reloadData];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,20 +51,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
-//    
-//    UICollectionViewFlowLayout *myLayout = [[UICollectionViewFlowLayout alloc]init];
-//    
-//    if ((toInterfaceOrientation == UIDeviceOrientationPortrait) || (toInterfaceOrientation == UIDeviceOrientationPortraitUpsideDown)){
-//        myLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-//    }else{
-//        myLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-//    }
-//    
-//    [self.collectionView setCollectionViewLayout:myLayout animated:YES];
-//}
-
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -93,7 +64,7 @@
 }
 
 #pragma mark -
-#pragma mark UICollectionViewImplementation
+#pragma mark UICollectionView layout configs
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
@@ -106,58 +77,63 @@
     return [[album imageCollection]count];
 }
 
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
-                 cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    RKPThumbnailCell *myCell = [collectionView
-                                    dequeueReusableCellWithReuseIdentifier:@"ThumbNailCell"
-                                    forIndexPath:indexPath];
-    
-    
-    
-    ImageAlbum *album = [imageCollection objectAtIndex:[indexPath section]];
-    
-    ImageInformation *imageInfoAtIndex = [[album imageCollection] objectAtIndex:[indexPath row]];
-    [myCell setImageDetails:imageInfoAtIndex];
-    [[myCell thumbnailImage] setImage:[imageInfoAtIndex thumbNail]];
-
-    
-   [self setAccessibilityforCell:myCell atIndexPath:indexPath];
-    return myCell;
-}
-
-
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return CGSizeMake(70, 70);
 }
 
-//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-//{
-//    UIEdgeInsets insets=UIEdgeInsetsMake(1, 1, 1, 1);
-//    return insets;
-//}
+#pragma mark UICollectionView cell creations
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    RKPThumbnailCell *thumbnailCell = [self createImageThumbnailCell:indexPath];
+    [self setAccessibilityforCell:thumbnailCell atIndexPath:indexPath];
+    return thumbnailCell;
+}
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     if (kind == UICollectionElementKindSectionHeader) {
-        
-        ImageAlbum *album =  [imageCollection objectAtIndex:[indexPath section]];
-        
-        UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"SecHeader" forIndexPath:indexPath];
-        
-        if (headerView==nil) {
-            headerView=[[UICollectionReusableView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-        }
-        
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, 320, 30)];
-        label.text = [NSString stringWithFormat:@"%@",[album albumName]];
-        [headerView addSubview:label];
-        
+        UICollectionReusableView *headerView = [self createSectionHeaderCell:indexPath];
         return headerView;
-        
     }
     return nil;
+}
+
+#pragma mark -
+#pragma mark Private convenience methods
+
+- (UICollectionReusableView *)createSectionHeaderCell:(NSIndexPath *)indexPath{
+    
+    ImageAlbum *album =  [imageCollection objectAtIndex:[indexPath section]];
+    
+    UICollectionReusableView *headerView = [[self collectionView] dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"SecHeader" forIndexPath:indexPath];
+    
+    if (headerView==nil) {
+        headerView=[[UICollectionReusableView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    }
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, 320, 30)];
+    label.text = [NSString stringWithFormat:@"%@",[album albumName]];
+    [headerView addSubview:label];
+    
+    return headerView;
+
+}
+
+- (RKPThumbnailCell *)createImageThumbnailCell:(NSIndexPath *)indexPath{
+    
+    RKPThumbnailCell *cell = [[self collectionView]
+                                dequeueReusableCellWithReuseIdentifier:@"ThumbNailCell"
+                                forIndexPath:indexPath];
+    
+    ImageAlbum *album = [imageCollection objectAtIndex:[indexPath section]];
+    
+    ImageInformation *imageInfoAtIndex = [[album imageCollection] objectAtIndex:[indexPath row]];
+    [cell setImageDetails:imageInfoAtIndex];
+    [[cell thumbnailImage] setImage:[imageInfoAtIndex thumbNail]];
+    
+    return cell;
 }
 
 

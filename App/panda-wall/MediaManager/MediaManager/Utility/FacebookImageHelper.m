@@ -7,7 +7,14 @@
 //
 
 #import "FacebookImageHelper.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @implementation FacebookImageHelper
 
+
++(void) fetchImagesFromFaceBook:(imageFetcherCompletion) compblock failureBlock:(imageFetcherFailed) failureBlock{
+    
+    
+    
+}
 @end

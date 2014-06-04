@@ -10,4 +10,9 @@
 
 @interface FacebookImageHelper : NSObject
 
+typedef void(^imageFetcherCompletion)(NSArray *);
+typedef void(^imageFetcherFailed)(NSError *);
+
++(void) fetchImagesFromFaceBook:(imageFetcherCompletion) compblock failureBlock:(imageFetcherFailed) failureBlock;
+
 @end

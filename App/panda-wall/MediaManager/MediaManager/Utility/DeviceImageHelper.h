@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ImageHelper : NSObject
+@interface DeviceImageHelper : NSObject
 
 typedef void(^imageFetcherCompletion)(NSArray *);
+typedef void(^imageFetcherFailed)(NSError *);
 
-+(void) fetchImages:(imageFetcherCompletion) compblock;
-
-
++(void) fetchImagesFromDevice:(imageFetcherCompletion) compblock failureBlock:(imageFetcherFailed) failureBlock;
 
 @end

@@ -10,8 +10,9 @@
 
 @interface MediaManager : NSObject
 
-typedef void(^myCompletion)(NSArray *);
+typedef void(^fetcingSuccessful)(NSArray *);
+typedef void(^fetchingFailed)(NSError *);
 
-+(void) fetchImages:(myCompletion) compblock;
++(void) fetchImages:(fetcingSuccessful) compblock fetchingFailed:(fetchingFailed)failureBlock;
 
 @end

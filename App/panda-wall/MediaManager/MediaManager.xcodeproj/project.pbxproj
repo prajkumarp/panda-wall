@@ -22,7 +22,9 @@
 		23E147281936F049007F0F6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E147271936F049007F0F6C /* CoreLocation.framework */; };
 		23E1472B1936F0CA007F0F6C /* ImageInformation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23E147241936EDAC007F0F6C /* ImageInformation.h */; };
 		23E1472D193776BA007F0F6C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1472C193776BA007F0F6C /* AssetsLibrary.framework */; };
-		23E1473419377701007F0F6C /* ImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1473319377701007F0F6C /* ImageHelper.m */; };
+		23E1473419377701007F0F6C /* DeviceImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1473319377701007F0F6C /* DeviceImageHelper.m */; };
+		EE7E320E193EC0E7007E2E34 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7E320D193EC0E7007E2E34 /* FacebookSDK.framework */; };
+		EE7E3211193EC164007E2E34 /* FacebookImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7E3210193EC164007E2E34 /* FacebookImageHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +70,11 @@
 		23E147251936EDAC007F0F6C /* ImageInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageInformation.m; sourceTree = "<group>"; };
 		23E147271936F049007F0F6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		23E1472C193776BA007F0F6C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		23E1473219377701007F0F6C /* ImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHelper.h; sourceTree = "<group>"; };
-		23E1473319377701007F0F6C /* ImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHelper.m; sourceTree = "<group>"; };
+		23E1473219377701007F0F6C /* DeviceImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceImageHelper.h; sourceTree = "<group>"; };
+		23E1473319377701007F0F6C /* DeviceImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceImageHelper.m; sourceTree = "<group>"; };
+		EE7E320D193EC0E7007E2E34 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = Framework/FacebookSDK.framework; sourceTree = "<group>"; };
+		EE7E320F193EC164007E2E34 /* FacebookImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookImageHelper.h; sourceTree = "<group>"; };
+		EE7E3210193EC164007E2E34 /* FacebookImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookImageHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23E1472D193776BA007F0F6C /* AssetsLibrary.framework in Frameworks */,
+				EE7E320E193EC0E7007E2E34 /* FacebookSDK.framework in Frameworks */,
 				23E147281936F049007F0F6C /* CoreLocation.framework in Frameworks */,
 				23E146F11936E631007F0F6C /* Foundation.framework in Frameworks */,
 			);
@@ -119,6 +125,7 @@
 		23E146EF1936E631007F0F6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE7E320D193EC0E7007E2E34 /* FacebookSDK.framework */,
 				23E1472C193776BA007F0F6C /* AssetsLibrary.framework */,
 				23E147271936F049007F0F6C /* CoreLocation.framework */,
 				23E146F01936E631007F0F6C /* Foundation.framework */,
@@ -180,8 +187,10 @@
 		23E1473119377701007F0F6C /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				23E1473219377701007F0F6C /* ImageHelper.h */,
-				23E1473319377701007F0F6C /* ImageHelper.m */,
+				23E1473219377701007F0F6C /* DeviceImageHelper.h */,
+				23E1473319377701007F0F6C /* DeviceImageHelper.m */,
+				EE7E320F193EC164007E2E34 /* FacebookImageHelper.h */,
+				EE7E3210193EC164007E2E34 /* FacebookImageHelper.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -267,10 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23E1473419377701007F0F6C /* ImageHelper.m in Sources */,
+				23E1473419377701007F0F6C /* DeviceImageHelper.m in Sources */,
 				23E147261936EDAC007F0F6C /* ImageInformation.m in Sources */,
 				23E146F81936E631007F0F6C /* MediaManager.m in Sources */,
 				23BA728419399ED400355E0E /* ImageAlbum.m in Sources */,
+				EE7E3211193EC164007E2E34 /* FacebookImageHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +386,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/MediaManager.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MediaManager/MediaManager-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -388,6 +402,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/MediaManager.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MediaManager/MediaManager-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";

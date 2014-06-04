@@ -9,16 +9,18 @@
 #import "MediaManager.h"
 #import "ImageInformation.h"
 #import "ImageAlbum.h"
-#import "ImageHelper.h"
+#import "DeviceImageHelper.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
 @implementation MediaManager
 
-+(void) fetchImages:(myCompletion) compblock{
++(void) fetchImages:(fetcingSuccessful) compblock fetchingFailed:(fetchingFailed)failureBlock
+{
     
-    [ImageHelper fetchImages:^(NSArray *imageCollection) {
+    [DeviceImageHelper fetchImagesFromDevice:^(NSArray *imageCollection) {
         compblock(imageCollection);
-    }];
+    } failureBlock:^(NSError *error) {
+        failureBlock(error);}];
 }
 
 

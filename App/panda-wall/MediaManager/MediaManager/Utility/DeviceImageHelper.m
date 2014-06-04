@@ -6,16 +6,16 @@
     //  Copyright (c) 2014 Panneerselvam, Rajkumar. All rights reserved.
     //
 
-#import "ImageHelper.h"
+#import "DeviceImageHelper.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <CoreLocation/CoreLocation.h>
 #import "ImageAlbum.h"
 #import "ImageInformation.h"
 
 
-@implementation ImageHelper
+@implementation DeviceImageHelper
 
-+(void) fetchImages:(imageFetcherCompletion) fetcherCompletionBlock{
++(void) fetchImagesFromDevice:(imageFetcherCompletion) fetcherCompletionBlock failureBlock:(imageFetcherFailed) fetcherfailureBlock{
     
     NSMutableArray *imageCollection  = [[NSMutableArray alloc] init];
     
@@ -30,7 +30,9 @@
             default:
                 break;
         }
+        fetcherfailureBlock(error);
     };
+    
     
         // emumerate through our groups and only add groups that contain photos
     ALAssetsLibraryGroupsEnumerationResultsBlock listGroupBlock = ^(ALAssetsGroup *group, BOOL *stop) {

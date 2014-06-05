@@ -22,7 +22,6 @@
 		23E1463419366A3B007F0F6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1461019366A3A007F0F6C /* UIKit.framework */; };
 		23E1463C19366A3B007F0F6C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23E1463A19366A3B007F0F6C /* InfoPlist.strings */; };
 		23E1463E19366A3B007F0F6C /* panda_wallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1463D19366A3B007F0F6C /* panda_wallTests.m */; };
-		23E14693193675A5007F0F6C /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E14686193675A5007F0F6C /* Main_iPad.storyboard */; };
 		23E14694193675A5007F0F6C /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E14688193675A5007F0F6C /* Main_iPhone.storyboard */; };
 		23E14695193675A5007F0F6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E1468A193675A5007F0F6C /* Images.xcassets */; };
 		23E14696193675A5007F0F6C /* RKPThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1468D193675A5007F0F6C /* RKPThumbnailCell.m */; };
@@ -41,6 +40,8 @@
 		23FD2A6C19402AA500EFBFD3 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2A6519402AA500EFBFD3 /* ECSlidingViewController.m */; };
 		23FD2A6D19402AA500EFBFD3 /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2A6719402AA500EFBFD3 /* UIViewController+ECSlidingViewController.m */; };
 		23FD2A7219402BBA00EFBFD3 /* RKPMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2A7119402BBA00EFBFD3 /* RKPMenuViewController.m */; };
+		23FD2A80194037C100EFBFD3 /* menu-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 23FD2A7E194037C100EFBFD3 /* menu-background.png */; };
+		23FD2A81194037C100EFBFD3 /* menu-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23FD2A7F194037C100EFBFD3 /* menu-background@2x.png */; };
 		EE09D2D4193ACF61002A83A5 /* RKPMasterViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE09D2D3193ACF61002A83A5 /* RKPMasterViewControllerTest.m */; };
 		EE09D2D9193AE741002A83A5 /* RKPSectionHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE09D2D8193AE741002A83A5 /* RKPSectionHeaderCell.m */; };
 /* End PBXBuildFile section */
@@ -89,7 +90,6 @@
 		23E1463919366A3B007F0F6C /* panda-wallTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "panda-wallTests-Info.plist"; sourceTree = "<group>"; };
 		23E1463B19366A3B007F0F6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		23E1463D19366A3B007F0F6C /* panda_wallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = panda_wallTests.m; sourceTree = "<group>"; };
-		23E14687193675A5007F0F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		23E14689193675A5007F0F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		23E1468A193675A5007F0F6C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		23E1468C193675A5007F0F6C /* RKPThumbnailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKPThumbnailCell.h; sourceTree = "<group>"; };
@@ -119,6 +119,8 @@
 		23FD2A6719402AA500EFBFD3 /* UIViewController+ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ECSlidingViewController.m"; sourceTree = "<group>"; };
 		23FD2A7019402BBA00EFBFD3 /* RKPMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKPMenuViewController.h; sourceTree = "<group>"; };
 		23FD2A7119402BBA00EFBFD3 /* RKPMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKPMenuViewController.m; sourceTree = "<group>"; };
+		23FD2A7E194037C100EFBFD3 /* menu-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-background.png"; path = "menu-background.imageset/menu-background.png"; sourceTree = "<group>"; };
+		23FD2A7F194037C100EFBFD3 /* menu-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-background@2x.png"; path = "menu-background.imageset/menu-background@2x.png"; sourceTree = "<group>"; };
 		EE09D2D3193ACF61002A83A5 /* RKPMasterViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKPMasterViewControllerTest.m; sourceTree = "<group>"; };
 		EE09D2D7193AE741002A83A5 /* RKPSectionHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKPSectionHeaderCell.h; sourceTree = "<group>"; };
 		EE09D2D8193AE741002A83A5 /* RKPSectionHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKPSectionHeaderCell.m; sourceTree = "<group>"; };
@@ -234,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				23E1469919367852007F0F6C /* Images */,
-				23E14686193675A5007F0F6C /* Main_iPad.storyboard */,
 				23E14688193675A5007F0F6C /* Main_iPhone.storyboard */,
 				23E1468A193675A5007F0F6C /* Images.xcassets */,
 			);
@@ -268,6 +269,8 @@
 		23E1469919367852007F0F6C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				23FD2A7E194037C100EFBFD3 /* menu-background.png */,
+				23FD2A7F194037C100EFBFD3 /* menu-background@2x.png */,
 				23BA728A1939AFFC00355E0E /* pin@2x.jpg */,
 				23BA728B1939AFFC00355E0E /* time@2x.png */,
 				23BA72861939AF4700355E0E /* pin.jpg */,
@@ -421,8 +424,9 @@
 				23E1461719366A3A007F0F6C /* InfoPlist.strings in Resources */,
 				23BA72881939AF4700355E0E /* pin.jpg in Resources */,
 				23E14695193675A5007F0F6C /* Images.xcassets in Resources */,
-				23E14693193675A5007F0F6C /* Main_iPad.storyboard in Resources */,
+				23FD2A80194037C100EFBFD3 /* menu-background.png in Resources */,
 				23BA728C1939AFFC00355E0E /* pin@2x.jpg in Resources */,
+				23FD2A81194037C100EFBFD3 /* menu-background@2x.png in Resources */,
 				23E14694193675A5007F0F6C /* Main_iPhone.storyboard in Resources */,
 				23BA728D1939AFFC00355E0E /* time@2x.png in Resources */,
 			);
@@ -493,14 +497,6 @@
 				23E1463B19366A3B007F0F6C /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		23E14686193675A5007F0F6C /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				23E14687193675A5007F0F6C /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		23E14688193675A5007F0F6C /* Main_iPhone.storyboard */ = {

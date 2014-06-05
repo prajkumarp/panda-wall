@@ -14,6 +14,10 @@
 
 @implementation RKPMenuViewController
 
+- (void) viewDidLoad{
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"menu-background"]]];
+}
+
 - (IBAction)unwindToMenuViewController:(UIStoryboardSegue *)segue{}
 
 @end

@@ -82,7 +82,7 @@
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(70, 70);
+    return CGSizeMake(79, 79);
 }
 
 #pragma mark UICollectionView cell creations

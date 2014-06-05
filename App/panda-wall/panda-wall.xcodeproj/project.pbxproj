@@ -34,6 +34,13 @@
 		23E1471F1936E656007F0F6C /* libMediaManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1471C1936E632007F0F6C /* libMediaManager.a */; };
 		23E1472A1936F09E007F0F6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E147291936F09E007F0F6C /* CoreLocation.framework */; };
 		23E1473619377A70007F0F6C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E1473519377A70007F0F6C /* AssetsLibrary.framework */; };
+		23FD2A6819402AA500EFBFD3 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2A5C19402AA500EFBFD3 /* ECPercentDrivenInteractiveTransition.m */; };
+		23FD2A6919402AA500EFBFD3 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2A5E19402AA500EFBFD3 /* ECSlidingAnimationController.m */; };
+		23FD2A6A19402AA500EFBFD3 /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2A6119402AA500EFBFD3 /* ECSlidingInteractiveTransition.m */; };
+		23FD2A6B19402AA500EFBFD3 /* ECSlidingSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2A6319402AA500EFBFD3 /* ECSlidingSegue.m */; };
+		23FD2A6C19402AA500EFBFD3 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2A6519402AA500EFBFD3 /* ECSlidingViewController.m */; };
+		23FD2A6D19402AA500EFBFD3 /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2A6719402AA500EFBFD3 /* UIViewController+ECSlidingViewController.m */; };
+		23FD2A7219402BBA00EFBFD3 /* RKPMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2A7119402BBA00EFBFD3 /* RKPMenuViewController.m */; };
 		EE09D2D4193ACF61002A83A5 /* RKPMasterViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EE09D2D3193ACF61002A83A5 /* RKPMasterViewControllerTest.m */; };
 		EE09D2D9193AE741002A83A5 /* RKPSectionHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE09D2D8193AE741002A83A5 /* RKPSectionHeaderCell.m */; };
 /* End PBXBuildFile section */
@@ -97,6 +104,21 @@
 		23E147161936E631007F0F6C /* MediaManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MediaManager.xcodeproj; path = MediaManager/MediaManager.xcodeproj; sourceTree = "<group>"; };
 		23E147291936F09E007F0F6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		23E1473519377A70007F0F6C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		23FD2A5B19402AA500EFBFD3 /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
+		23FD2A5C19402AA500EFBFD3 /* ECPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
+		23FD2A5D19402AA500EFBFD3 /* ECSlidingAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingAnimationController.h; sourceTree = "<group>"; };
+		23FD2A5E19402AA500EFBFD3 /* ECSlidingAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingAnimationController.m; sourceTree = "<group>"; };
+		23FD2A5F19402AA500EFBFD3 /* ECSlidingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingConstants.h; sourceTree = "<group>"; };
+		23FD2A6019402AA500EFBFD3 /* ECSlidingInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingInteractiveTransition.h; sourceTree = "<group>"; };
+		23FD2A6119402AA500EFBFD3 /* ECSlidingInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingInteractiveTransition.m; sourceTree = "<group>"; };
+		23FD2A6219402AA500EFBFD3 /* ECSlidingSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingSegue.h; sourceTree = "<group>"; };
+		23FD2A6319402AA500EFBFD3 /* ECSlidingSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingSegue.m; sourceTree = "<group>"; };
+		23FD2A6419402AA500EFBFD3 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
+		23FD2A6519402AA500EFBFD3 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
+		23FD2A6619402AA500EFBFD3 /* UIViewController+ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ECSlidingViewController.h"; sourceTree = "<group>"; };
+		23FD2A6719402AA500EFBFD3 /* UIViewController+ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ECSlidingViewController.m"; sourceTree = "<group>"; };
+		23FD2A7019402BBA00EFBFD3 /* RKPMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKPMenuViewController.h; sourceTree = "<group>"; };
+		23FD2A7119402BBA00EFBFD3 /* RKPMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKPMenuViewController.m; sourceTree = "<group>"; };
 		EE09D2D3193ACF61002A83A5 /* RKPMasterViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKPMasterViewControllerTest.m; sourceTree = "<group>"; };
 		EE09D2D7193AE741002A83A5 /* RKPSectionHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKPSectionHeaderCell.h; sourceTree = "<group>"; };
 		EE09D2D8193AE741002A83A5 /* RKPSectionHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKPSectionHeaderCell.m; sourceTree = "<group>"; };
@@ -167,6 +189,7 @@
 		23E1461219366A3A007F0F6C /* panda-wall */ = {
 			isa = PBXGroup;
 			children = (
+				23FD2A5A19402AA500EFBFD3 /* ECSlidingViewController */,
 				23E14685193675A5007F0F6C /* Resources */,
 				23E1468B193675A5007F0F6C /* Views */,
 				23E1468E193675A5007F0F6C /* ViewControllers */,
@@ -236,6 +259,8 @@
 				23E14690193675A5007F0F6C /* RKPDetailViewController.m */,
 				23E14691193675A5007F0F6C /* RKPMasterViewController.h */,
 				23E14692193675A5007F0F6C /* RKPMasterViewController.m */,
+				23FD2A7019402BBA00EFBFD3 /* RKPMenuViewController.h */,
+				23FD2A7119402BBA00EFBFD3 /* RKPMenuViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -268,6 +293,26 @@
 				23E1471E1936E632007F0F6C /* MediaManagerTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		23FD2A5A19402AA500EFBFD3 /* ECSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				23FD2A5B19402AA500EFBFD3 /* ECPercentDrivenInteractiveTransition.h */,
+				23FD2A5C19402AA500EFBFD3 /* ECPercentDrivenInteractiveTransition.m */,
+				23FD2A5D19402AA500EFBFD3 /* ECSlidingAnimationController.h */,
+				23FD2A5E19402AA500EFBFD3 /* ECSlidingAnimationController.m */,
+				23FD2A5F19402AA500EFBFD3 /* ECSlidingConstants.h */,
+				23FD2A6019402AA500EFBFD3 /* ECSlidingInteractiveTransition.h */,
+				23FD2A6119402AA500EFBFD3 /* ECSlidingInteractiveTransition.m */,
+				23FD2A6219402AA500EFBFD3 /* ECSlidingSegue.h */,
+				23FD2A6319402AA500EFBFD3 /* ECSlidingSegue.m */,
+				23FD2A6419402AA500EFBFD3 /* ECSlidingViewController.h */,
+				23FD2A6519402AA500EFBFD3 /* ECSlidingViewController.m */,
+				23FD2A6619402AA500EFBFD3 /* UIViewController+ECSlidingViewController.h */,
+				23FD2A6719402AA500EFBFD3 /* UIViewController+ECSlidingViewController.m */,
+			);
+			path = ECSlidingViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,12 +443,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23FD2A6B19402AA500EFBFD3 /* ECSlidingSegue.m in Sources */,
 				23E1461D19366A3A007F0F6C /* RKPAppDelegate.m in Sources */,
+				23FD2A6C19402AA500EFBFD3 /* ECSlidingViewController.m in Sources */,
 				23E14696193675A5007F0F6C /* RKPThumbnailCell.m in Sources */,
+				23FD2A7219402BBA00EFBFD3 /* RKPMenuViewController.m in Sources */,
+				23FD2A6A19402AA500EFBFD3 /* ECSlidingInteractiveTransition.m in Sources */,
 				EE09D2D9193AE741002A83A5 /* RKPSectionHeaderCell.m in Sources */,
 				23E1461919366A3A007F0F6C /* main.m in Sources */,
 				23E14698193675A5007F0F6C /* RKPMasterViewController.m in Sources */,
+				23FD2A6819402AA500EFBFD3 /* ECPercentDrivenInteractiveTransition.m in Sources */,
 				23E14697193675A5007F0F6C /* RKPDetailViewController.m in Sources */,
+				23FD2A6D19402AA500EFBFD3 /* UIViewController+ECSlidingViewController.m in Sources */,
+				23FD2A6919402AA500EFBFD3 /* ECSlidingAnimationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
